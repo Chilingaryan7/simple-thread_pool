@@ -1,9 +1,9 @@
 #! /bin/bash
-main: mian.o implementation.o
-	g++ -std=c++23 mian.o implementation.o -o main
+main: main.o implementation.o
+	g++ -std=c++23 main.o implementation.o -o main
 
-main.o: mian.cpp header.hpp
-	g++ -std=c++23 mian.cpp -c
+main.o: main.cpp header.hpp
+	g++ -std=c++23 main.cpp -c
 
 implementation.o: implementation.cpp header.hpp
 	g++ -std=c++23 implementation.cpp -c
