@@ -15,7 +15,7 @@
 #include <chrono>
 
 class ThreadPool {
-    public:
+public:
     using foo_ptr = void(*)(void);
     //ctor && dtor
     ThreadPool(size_t threads_count = 5);
@@ -24,7 +24,8 @@ class ThreadPool {
     //member functions
     void push_task(foo_ptr task);
     void end_wark();
-    private:
+
+private:
     void thread_foo();
 
     std::mutex m_mutex;
