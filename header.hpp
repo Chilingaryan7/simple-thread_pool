@@ -16,7 +16,7 @@
 
 class ThreadPool {
 public:
-    using foo_ptr = void(*)(void);
+    using foo_ptr = void(*)();
     //ctor && dtor
     ThreadPool(size_t threads_count = 5);
     virtual ~ThreadPool();
